@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: grey" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.UI.WindowController">
+  <children>
+    <Button layoutX="293.0" layoutY="422.0" mnemonicParsing="false" onAction="#pressButtonCloseApp" text="CloseApp" />
+    <TextField fx:id="pathText" layoutX="106.0" layoutY="234.0" prefWidth="200.0" />
+    <Label layoutX="14.0" layoutY="240.0" text="JavaProject:" />
+    <Button layoutX="329.0" layoutY="237.0" mnemonicParsing="false" onAction="#pressButtonBrowse" prefWidth="85.0" text="Browse" />
+    <Button layoutX="131.0" layoutY="423.0" mnemonicParsing="false" onAction="#pressButtonConfirm" text="Confirm" />
+  </children>
+</Pane>
