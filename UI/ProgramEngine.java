@@ -11,7 +11,10 @@ import javafx.stage.Stage;
 
 
 public class ProgramEngine extends Application{
+	public static Stage stage;
+	
 	public void start(Stage primaryStage) throws Exception{
+		this.stage = primaryStage;
 		Parent root = FXMLLoader.load(getClass().getResource("StartWindow.fxml"));
 		primaryStage.setTitle("StartEngine");
 		primaryStage.setScene(new Scene(root, 500, 500));

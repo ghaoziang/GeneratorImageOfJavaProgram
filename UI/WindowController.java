@@ -1,5 +1,7 @@
 package com.UI;
 import java.io.File;
+import java.io.IOException;
+
 import com.source.ReaderFromDirectory;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -31,6 +33,11 @@ public class WindowController {
 	
 	public void pressButtonConfirm(ActionEvent event) {
 		ReaderFromDirectory reader = new ReaderFromDirectory(path);
+		try {
+			CodeShowWindow csw = new CodeShowWindow();
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 }
