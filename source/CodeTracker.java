@@ -6,6 +6,8 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import com.UI.ShapeFactory;
+
 public class CodeTracker {
 
 	private ArrayList<String> listJAVACode;
@@ -26,12 +28,11 @@ public class CodeTracker {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(input));
 			String line = reader.readLine();
 			while(line!=null) {
-				if(line.contains("	private void planRoutes")) {
+				if(line.contains("	public static void main")) {
 					line = reader.readLine();
 					break;
 				}
 				line = reader.readLine();
-				System.out.println(line);
 			}
 			int count = 0;
 			while(!line.equals("	}")) {
@@ -40,13 +41,14 @@ public class CodeTracker {
 				line = reader.readLine();
 			}
 			ArrayList<String[]> lineTokens = tokenMachine.getTokenArrays();
+			ArrayList<ProgramCodeLine> typeList = new ArrayList<ProgramCodeLine>();
 			for(int i=0;i<lineTokens.size();i++) {
-				for(int j=0;j<lineTokens.get(i).length;j++) {
-					System.out.print(lineTokens.get(i)[j] + " ");
-				}
-				System.out.println();
+				typeList.add(codeFactory.match(lineTokens.get(i)));
 			}
-			System.out.println(count);
+			ShapeFactory sF = new ShapeFactory(typeList);
+			for(int i=0;i<typeList.size();i++) {
+				sF.produceShape();
+			}
 		}catch(Exception e) {
 			e.printStackTrace();
 		}

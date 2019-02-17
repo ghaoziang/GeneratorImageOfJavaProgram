@@ -9,9 +9,8 @@ public class JavaLineFactory {
 		tokensList = tokens.getTokenArrays();
 	}
 	
-	public ProgramCodeLine match(String javaLine) {
+	public ProgramCodeLine match(String[] tokens) {
 		for(int i=0;i<tokensList.size();i++) {
-			String[] tokens = tokensList.get(i);
 			int form = codeForm(tokens);
 			switch(form) {
 			case 1:

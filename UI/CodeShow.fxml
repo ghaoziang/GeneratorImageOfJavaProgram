@@ -14,9 +14,9 @@
         <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="712.0" prefWidth="1082.0">
           <children>
             <Line endX="0.0" layoutX="209.0" layoutY="145.0" rotate="90.0" startX="1232.5076904296875" startY="-3.8830440044403076" />
-            <Line endX="38.24201965332031" endY="-4.010048866271973" layoutX="-92.0" layoutY="350.0" rotate="90.0" startX="800.0" />
-            <Label layoutX="113.0" layoutY="52.0" text="Reference" />
-            <Label layoutX="552.0" layoutY="52.0" text="Instance" />
+            <Line endX="68.0050048828125" endY="-58.87902069091797" layoutX="-92.0" layoutY="350.0" rotate="90.0" startX="964.6851806640625" startY="-64.92225646972656" />
+            <Label layoutX="113.0" layoutY="52.0" text="Conditions" />
+            <Label layoutX="552.0" layoutY="52.0" text="Variables" />
             <Label layoutX="933.0" layoutY="52.0" text="Method" />
           </children>
         </AnchorPane>

@@ -4,4 +4,8 @@ public abstract class ProgramCodeLine {
 	public String toString() {
 		return null;
 	}
+	
+	public void toImage() {
+		
+	}
 }

@@ -1,14 +1,19 @@
 package com.source;
 
 public class PrimitiveVariable extends ProgramCodeLine {
-	String[] tokens;
+	String varType;
+	String varName;
 	
 	public PrimitiveVariable(String[] tokens) {
-		this.tokens = tokens;
+		varType = tokens[0];
+		varName = tokens[1];
 	}
 	
 	public String toString() {
 		return null;
+	}
+	
+	public void toImage() {
 		
 	}
 }
